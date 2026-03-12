@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:8080"
+    # Añadimos esto para asegurar que Flask vea el entorno correctamente
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: always
